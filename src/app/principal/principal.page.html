@@ -1,0 +1,97 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Principal</ion-title>
+    <ion-buttons slot="end">
+      <ion-button *ngIf="isSubscribed" color="primary" (click)="irASuscripcion()">
+        {{ subscription.plan }}
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="main-content" class="ion-padding">
+  <div class="login-container">
+    <div class="logo-container">
+      <div class="gym-logo">
+        <h1>GYM</h1>
+        <h2 class="gymflow-title">GYMFLOW</h2>
+      </div>
+      <p>Bienvenido, {{ username }}</p>
+    </div>
+
+    <div *ngIf="isSubscribed">
+      <h2>Tu Suscripción Actual:</h2>
+      <p>Plan: {{ subscription.plan }}</p>
+      <p>Precio: {{ subscription.precio }}</p>
+      <ion-button color="danger" (click)="cancelarSuscripcion()">Cancelar Suscripción</ion-button>
+    </div>
+
+    <div class="form-container">
+      <div class="user-info">
+        <p><strong>Edad:</strong> {{ edad }} años</p>
+        <div class="info-row">
+          <p><strong>Estatura:</strong> {{ estatura }} cm</p>
+          <ion-icon name="person" class="info-icon"></ion-icon>
+        </div>
+        <div class="info-row">
+          <p><strong>Peso:</strong> {{ peso }} kg</p>
+          <ion-icon name="fitness" class="info-icon"></ion-icon>
+        </div>
+        <p><strong>Estado:</strong> {{ calcularEstado() }}</p>
+      </div>
+
+      <div class="rutina-y-dieta">
+        <div class="card">
+          <h2>Rutina</h2>
+          <p>{{ rutina }}</p>
+          <ion-button expand="full" (click)="modificarRutina()">Modificar Rutina</ion-button>
+        </div>
+        <div class="card">
+          <h2>Dieta</h2>
+          <p>{{ dieta }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="trainers-section">
+      <h2>Entrenadores Personales</h2>
+      <div class="trainers-container">
+        <div class="trainer-card" *ngFor="let trainer of trainers">
+          <h3>{{ trainer.name }}</h3>
+          <ion-button (click)="reservar(trainer)">Reservar</ion-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-menu side="start" menuId="first" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item button (click)="volverAlInicio()">
+        Volver al Inicio
+      </ion-item>
+      <ion-item button (click)="irASuscripcion()">
+        Ir a Suscripción
+      </ion-item>
+      <ion-item button (click)="abrirSoporte()">
+        Soporte
+      </ion-item>
+      <ion-item button (click)="irABitacora()">
+        Ir a Bitácora del Progreso
+      </ion-item>
+      <ion-item button color="danger" (click)="borrarCuenta()">
+        Eliminar Cuenta
+      </ion-item>
+    </ion-list>
+    <app-temporizador (tiempoFinalizado)="onTiempoFinalizado()"></app-temporizador>
+  </ion-content>
+</ion-menu>

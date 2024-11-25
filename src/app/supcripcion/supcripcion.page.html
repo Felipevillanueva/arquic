@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Suscripción</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="volverAlInicio()">Volver al Inicio</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="subscription-container">
+    <div class="logo-container">
+      <h1>GYM</h1>
+      <h2 class="gymflow-title">GYMFLOW</h2>
+    </div>
+    <h2>Opciones de Suscripción</h2>
+    <div class="subscription-cards-container">
+      <div class="subscription-card">
+        <h3>Plan 1 Mes</h3>
+        <p>Acceso a todas las clases grupales.</p>
+        <p>Precio: $30</p>
+        <ion-button expand="full" (click)="abrirModal('Plan 1 Mes', 30)">Suscribirse</ion-button>
+      </div>
+      <div class="subscription-card">
+        <h3>Plan 3 Meses</h3>
+        <p>Acceso a todas las clases grupales.</p>
+        <p>Precio: $80</p>
+        <ion-button expand="full" (click)="abrirModal('Plan 3 Meses', 80)">Suscribirse</ion-button>
+      </div>
+      <div class="subscription-card">
+        <h3>Plan 6 Meses</h3>
+        <p>Acceso a todas las clases grupales y sesiones personalizadas.</p>
+        <p>Precio: $150</p>
+        <ion-button expand="full" (click)="abrirModal('Plan 6 Meses', 150)">Suscribirse</ion-button>
+      </div>
+      <div class="subscription-card">
+        <h3>Plan 1 Año</h3>
+        <p>Acceso a todas las clases grupales y sesiones personalizadas.</p>
+        <p>Precio: $250</p>
+        <ion-button expand="full" (click)="abrirModal('Plan 1 Año', 250)">Suscribirse</ion-button>
+      </div>
+    </div>
+    <div *ngIf="subscription">
+      <h2>Tu Suscripción Actual:</h2>
+      <p>Plan: {{ subscription.plan }}</p>
+      <p>Precio: {{ subscription.precio }}</p>
+      <ion-button color="danger" (click)="cancelarSuscripcion()">Cancelar Suscripción</ion-button>
+    </div>
+  </div>
+</ion-content>

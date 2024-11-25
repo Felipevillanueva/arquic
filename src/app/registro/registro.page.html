@@ -1,0 +1,58 @@
+<ion-header>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="login-container">
+    <div class="logo-container">
+      <div class="gym-logo">
+        <h1>GYM</h1>
+        <div class="barbell"></div>
+        <h2>GYMFLOW</h2>
+      </div>
+      <p>Completa el formulario para registrarte</p>
+    </div>
+
+    <div class="form-container">
+      <form (ngSubmit)="registrar()">
+        <ion-item class="custom-input">
+          <ion-label position="floating">Nombre de Usuario</ion-label>
+          <ion-input type="text" [(ngModel)]="username" name="username" required></ion-input>
+        </ion-item>
+
+        <ion-item class="custom-input">
+          <ion-label position="floating">Edad</ion-label>
+          <ion-select [(ngModel)]="edad" name="edad" required>
+            <ion-select-option *ngFor="let age of ages" [value]="age">{{ age }}</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item class="custom-input">
+          <ion-label position="floating">Peso (kg)</ion-label>
+          <ion-input type="number" [(ngModel)]="peso" name="peso" min="40" max="300" required></ion-input>
+        </ion-item>
+
+        <ion-item class="custom-input">
+          <ion-label position="floating">Estatura (cm)</ion-label>
+          <ion-input type="number" [(ngModel)]="estatura" name="estatura" required></ion-input>
+        </ion-item>
+
+        <ion-item class="custom-input">
+          <ion-label position="floating">RUT</ion-label>
+          <ion-input type="text" [(ngModel)]="rut" name="rut" required></ion-input>
+        </ion-item>
+
+        <ion-item class="custom-input">
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="contrasena" name="contrasena" required></ion-input>
+        </ion-item>
+
+        <ion-item class="custom-input">
+          <ion-label position="floating">Confirmar Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="confirmarContrasena" name="confirmarContrasena" required></ion-input>
+        </ion-item>
+
+        <ion-button expand="full" type="submit">Registrar</ion-button>
+      </form>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Bitácora</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Bitácora de Ejercicios</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="logo-container">
+    <h1 class="gym-logo">GYMFLOW</h1>
+  </div>
+
+  <h2>Tareas Pendientes</h2>
+  <ion-list>
+    <ion-item *ngFor="let ejercicio of tareasPendientes">
+      <ion-label>
+        <h2 style="color: red;">{{ ejercicio.nombre }}</h2>
+        <p style="color: red;">Pendiente</p>
+      </ion-label>
+      <ion-checkbox slot="end" [checked]="ejercicio.completado" (ionChange)="toggleCompletado(ejercicio)"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <h2>Tareas Completadas</h2>
+  <ion-list>
+    <ion-item *ngFor="let ejercicio of tareasCompletadas">
+      <ion-label>
+        <h2 style="color: red;">{{ ejercicio.nombre }}</h2>
+        <p style="color: red;">Completado</p>
+      </ion-label>
+      <ion-checkbox slot="end" [checked]="ejercicio.completado" (ionChange)="toggleCompletado(ejercicio)"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <h2>Bitácora de Cambios</h2>
+  <ion-list>
+    <ion-item *ngFor="let entry of bitacora">
+      <ion-label>
+        <h2>{{ entry.nombre }}</h2>
+        <p>{{ entry.estado }} - {{ entry.fecha | date:'short' }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <div class="button-container">
+    <ion-button expand="full" (click)="irAlInicio()">Volver al Inicio</ion-button>
+  </div>
+</ion-content>

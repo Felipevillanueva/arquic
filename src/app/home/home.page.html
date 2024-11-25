@@ -1,0 +1,41 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="login-container">
+    <div class="logo-container">
+      <div class="gym-logo">
+        <h1>GYM</h1>
+        <div class="barbell"></div>
+        <h2>GYMFLOW</h2>
+      </div>
+      <p>Inicia sesión para continuar</p>
+    </div>
+
+    <div class="form-container">
+      <ion-item class="custom-input">
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input type="text" [(ngModel)]="username" placeholder="Ingresa tu usuario"></ion-input>
+      </ion-item>
+
+      <ion-item class="custom-input">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" placeholder="Ingresa tu contraseña"></ion-input>
+      </ion-item>
+
+      <div class="buttons-container">
+        <ion-button expand="block" class="login-button" (click)="iniciarSesion()">
+          Iniciar Sesión
+        </ion-button>
+        <ion-button expand="block" fill="clear" class="forgot-password-button" (click)="forgotPassword()">
+          ¿Olvidaste tu contraseña?
+        </ion-button>
+        <ion-button expand="block" class="register-button" (click)="goToRegistro()">
+          Registrarse
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>
+

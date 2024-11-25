@@ -1,0 +1,8 @@
+<div class="temporizador-container">
+  <label for="tiempo">Tiempo (minutos):</label>
+  <input type="number" id="tiempo" [(ngModel)]="tiempo" (change)="cambiarTiempo(tiempo)" min="1" />
+  <button (click)="iniciarTemporizador()" *ngIf="!isRunning">Iniciar Temporizador</button>
+  <button (click)="detenerTemporizador()" *ngIf="isRunning">Detener</button>
+  <button (click)="reiniciarTemporizador()" *ngIf="!isRunning && tiempoRestante > 0">Reiniciar</button>
+  <p *ngIf="isRunning">Tiempo restante: {{ tiempoFormateado }}</p>
+</div>

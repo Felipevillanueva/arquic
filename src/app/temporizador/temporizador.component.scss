@@ -1,0 +1,48 @@
+.temporizador-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+
+  label {
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  button {
+    background-color: #4caf50; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+
+    &:hover {
+      background-color: #45a049; /* Color de fondo al pasar el mouse */
+    }
+
+    margin-bottom: 5px; /* Espaciado entre botones */
+  }
+
+  p {
+    color: white; /* Color del texto */
+    font-size: 18px; /* Tamaño del texto */
+    margin-top: 10px;
+  }
+}

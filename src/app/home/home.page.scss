@@ -1,0 +1,146 @@
+ion-content {
+  --background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
+.login-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 40px;
+  
+  .gym-logo {
+    margin-bottom: 20px;
+    
+    h1 {
+      color: white;
+      font-size: 48px;
+      font-weight: 800;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    .barbell {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 20"><rect x="20" y="8" width="160" height="4" fill="white"/><circle cx="10" cy="10" r="10" fill="white"/><circle cx="190" cy="10" r="10" fill="white"/></svg>');
+      height: 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 10px 0;
+    }
+
+    h2 {
+      color: white;
+      font-size: 18px;
+      margin: 0;
+      font-weight: 500;
+      letter-spacing: 4px;
+    }
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 10px;
+    font-size: 16px;
+  }
+}
+
+.form-container {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.custom-input {
+  --background: rgba(255, 255, 255, 0.1);
+  --border-radius: 8px;
+  --padding-start: 12px;
+  --padding-end: 12px;
+  margin-bottom: 16px;
+  --border-color: rgba(255, 255, 255, 0.2);
+  --highlight-color-focused: white;
+
+  ion-label {
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  ion-input {
+    --color: white;
+    --placeholder-color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.buttons-container {
+  margin-top: 30px;
+
+  .login-button {
+    --background: #4CAF50;
+    --background-activated: #45a049;
+    --background-hover: #45a049;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+    margin-bottom: 16px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    ion-icon {
+      margin-right: 8px;
+      font-size: 20px;
+    }
+  }
+
+  .forgot-password-button {
+    --background: #2E7D32;
+    --background-activated: #2B6A2D;
+    --background-hover: #2B6A2D;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+    --color: white;
+    font-size: 14px;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  .register-button {
+    // Estilos para el botón de registro
+  }
+}
+
+// Estilos para iOS
+.ios {
+  .custom-input {
+    --highlight-height: 0;
+  }
+}
+
+// Estilos para dispositivos pequeños
+@media (max-width: 360px) {
+  .login-container {
+    padding: 10px;
+  }
+
+  .logo-container {
+    .gym-logo {
+      h1 {
+        font-size: 36px;
+      }
+
+      h2 {
+        font-size: 14px;
+      }
+    }
+  }
+}

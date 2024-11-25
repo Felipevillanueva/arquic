@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalles de Pago</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarModal()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="realizarPago()">
+    <ion-item>
+      <ion-label position="floating">Número de Tarjeta</ion-label>
+      <ion-input type="text" [(ngModel)]="numeroTarjeta" name="numeroTarjeta" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Nombre en la Tarjeta</ion-label>
+      <ion-input type="text" [(ngModel)]="nombreTarjeta" name="nombreTarjeta" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Fecha de Expiración (MM/AA)</ion-label>
+      <ion-input type="text" [(ngModel)]="fechaExpiracion" name="fechaExpiracion" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">CVV</ion-label>
+      <ion-input type="text" [(ngModel)]="cvv" name="cvv" required></ion-input>
+    </ion-item>
+    <ion-button expand="full" type="submit">Pagar</ion-button>
+  </form>
+</ion-content>

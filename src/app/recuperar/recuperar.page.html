@@ -1,0 +1,44 @@
+<ion-header>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="login-container">
+    <div class="logo-container">
+      <div class="gym-logo">
+        <h1>GYM</h1>
+        <div class="barbell"></div>
+        <h2>GYMFLOW</h2>
+      </div>
+      <p>Recupera tu contraseña</p>
+    </div>
+
+    <form (ngSubmit)="cambiarContrasena()">
+      <ion-item class="custom-input">
+        <ion-label position="floating">RUT</ion-label>
+        <ion-input type="text" [(ngModel)]="rut" name="rut" required></ion-input>
+      </ion-item>
+
+      <ion-item class="custom-input">
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input type="text" [(ngModel)]="nombre" name="nombre" required></ion-input>
+      </ion-item>
+
+      <ion-item class="custom-input">
+        <ion-label position="floating">Apellido</ion-label>
+        <ion-input type="text" [(ngModel)]="apellido" name="apellido" required></ion-input>
+      </ion-item>
+
+      <ion-item class="custom-input">
+        <ion-label position="floating">Nueva Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="nuevaContrasena" name="nuevaContrasena" required></ion-input>
+      </ion-item>
+
+      <ion-item class="custom-input">
+        <ion-label position="floating">Repetir Nueva Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="repetirContrasena" name="repetirContrasena" required></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" type="submit">Cambiar Contraseña</ion-button>
+    </form>
+  </div>
+</ion-content>

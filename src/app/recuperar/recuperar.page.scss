@@ -1,0 +1,64 @@
+ion-content {
+  --background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
+.login-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 40px;
+
+  .gym-logo {
+    margin-bottom: 20px;
+
+    h1 {
+      color: white;
+      font-size: 48px;
+      font-weight: 800;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      color: white;
+      font-size: 18px;
+      margin: 0;
+      font-weight: 500;
+      letter-spacing: 4px;
+    }
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 10px;
+    font-size: 16px;
+  }
+}
+
+.custom-input {
+  --background: rgba(255, 255, 255, 0.1);
+  --border-radius: 8px;
+  --padding-start: 12px;
+  --padding-end: 12px;
+  margin-bottom: 16px;
+  --border-color: rgba(255, 255, 255, 0.2);
+  --highlight-color-focused: white;
+
+  ion-label {
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  ion-input {
+    --color: white;
+    --placeholder-color: rgba(255, 255, 255, 0.6);
+  }
+}

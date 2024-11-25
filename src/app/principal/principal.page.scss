@@ -1,0 +1,283 @@
+.video-container {
+    display: flex;               // Utiliza flexbox para alinearlos en línea
+    overflow-x: auto;           // Habilita el desplazamiento horizontal
+    padding: 10px;              // Espaciado interno
+    gap: 10px;                  // Espaciado entre los videos
+  }
+  
+  iframe {
+    border-radius: 5px;         // Bordes redondeados para el iframe (opcional)
+    min-width: 300px;           // Establece un ancho mínimo para los videos
+  }
+  
+  // Añadir el mismo fondo degradado
+  ion-content {
+    --background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  }
+
+  ion-header {
+    ion-toolbar {
+      --background: transparent;
+      --border-color: transparent;
+      
+      ion-title {
+        color: white;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .video-section {
+    padding: 16px;
+
+    ion-segment {
+      margin-bottom: 20px;
+      --background: rgba(255, 255, 255, 0.971);
+      border-radius: 8px;
+      
+      ion-segment-button {
+        --color: rgba(255, 255, 255, 0.6);
+        --color-checked: white;
+        --indicator-color: #4CAF50;
+      }
+    }
+  }
+
+  .videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .video-card {
+    margin: 0;
+    transition: transform 0.2s ease;
+    background: rgba(255, 255, 255, 0.834);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .video-thumbnail {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px 8px 0 0;
+      }
+    }
+
+    ion-card-header {
+      padding: 10px 15px;
+    }
+
+    ion-card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: white;
+    }
+
+    ion-card-subtitle {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    ion-card-content {
+      padding: 0 15px 15px;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+  /* arquic/src/app/principal/principal.page.scss */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 20px;
+
+  .gym-logo {
+    h1 {
+      font-size: 48px;
+      color: white; /* Color del logo */
+    }
+
+    .gymflow-title {
+      color: #4CAF50; /* Color del texto "GYMFLOW" igual al del home */
+      font-size: 24px;
+    }
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+  }
+}
+
+.form-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center; /* Centrar el texto */
+
+  .user-info {
+    color: white; /* Color del texto */
+    font-size: 20px; /* Aumentar el tamaño de la fuente */
+
+    strong {
+      color: #4CAF50; // Color para los títulos
+    }
+
+    .info-row {
+      display: flex;
+      align-items: center;
+      justify-content: center; /* Centrar los elementos */
+      margin: 10px 0; /* Espaciado entre filas */
+    }
+
+    .info-icon {
+      margin-left: 8px; /* Espaciado entre el texto y el ícono */
+      color: white; /* Color del ícono */
+      font-size: 24px; /* Tamaño del ícono */
+    }
+  }
+}
+/* arquic/src/app/principal/principal.page.scss */
+.trainers-section {
+  margin-top: 20px;
+  text-align: center;
+
+  h2 {
+    color: white; /* Color del título */
+    margin-bottom: 20px;
+  }
+
+  .trainers-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .trainer-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      width: 150px; /* Ancho fijo para las tarjetas */
+      
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      h3 {
+        color: white; /* Color del nombre */
+        margin: 10px 0;
+      }
+
+      p {
+        color: rgba(255, 255, 255, 0.8); /* Color de la especialización */
+      }
+
+      ion-button {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+/* arquic/src/app/principal/principal.page.scss */
+ion-content {
+  --background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  overflow-y: auto; /* Permitir desplazamiento vertical */
+  height: 100%; /* Asegura que el contenido ocupe toda la altura */
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh; /* Asegura que el contenedor ocupe al menos la altura de la pantalla */
+}.trainers-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  .trainer-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 150px; /* Ancho fijo para las tarjetas */
+    
+    h3 {
+      color: white; /* Color del nombre */
+      margin: 10px 0;
+    }
+
+    ion-button {
+      margin-top: 10px; /* Espaciado entre el nombre y el botón */
+      --background: #4CAF50; /* Color de fondo del botón */
+      --color: white; /* Color del texto del botón */
+    }
+  }
+}
+/* ... otros estilos existentes ... */
+
+.form-container {
+  display: flex; /* Cambia a flex para alinear horizontalmente */
+  justify-content: space-between; /* Espacio entre los elementos */
+  align-items: flex-start; /* Alinea los elementos al inicio */
+  margin-top: 50px; /* Espacio superior para separar de los datos de usuario */
+}
+
+.user-info {
+  flex: 4; /* Permite que la sección de información del usuario ocupe el espacio disponible */
+  margin-right: 40px; /* Espacio entre la información del usuario y las tarjetas */
+  margin-left: 120px; /* Aumenta el margen izquierdo para mover los datos más a la derecha */
+  font-size: 50rem; 
+}
+.rutina-y-dieta {
+  display: flex;
+  flex-direction: column; /* Alinea las tarjetas verticalmente */
+  gap: 40px; /* Espacio entre las tarjetas */
+  align-items: flex-start; /* Alinea las tarjetas a la izquierda */
+  margin-left: 250px; /* Aumenta el margen izquierdo para mover las tarjetas más a la derecha */
+  margin-top: 20px; /* Espacio superior para separar de los datos de usuario */
+}
+
+
+.card {
+  background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+  border-radius: 40px; /* Bordes redondeados más pequeños */
+  padding: -150px; /* Reduce el espaciado interno */
+  width: 350px; /* Ancho fijo para las tarjetas, achicando un poco */
+  box-shadow: 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
+h2 {
+  color: white; /* Color del título */
+  margin-bottom: 10px; /* Espacio inferior */
+}
+
+p {
+  color: rgba(255, 255, 255, 0.8); /* Color del texto */
+}
+

@@ -1,0 +1,7 @@
+{
+  "name": "arquic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

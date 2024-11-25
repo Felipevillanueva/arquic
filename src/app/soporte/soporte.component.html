@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Soporte</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="modalController.dismiss()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Escribe tu mensaje</ion-label>
+    <ion-textarea [(ngModel)]="mensaje" placeholder="Escribe tu mensaje..."></ion-textarea>
+  </ion-item>
+  <ion-button expand="full" color="primary" (click)="enviarMensaje()">Enviar</ion-button>
+</ion-content>

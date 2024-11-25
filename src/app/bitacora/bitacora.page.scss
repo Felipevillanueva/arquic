@@ -1,0 +1,45 @@
+ion-content {
+  --background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  padding: 20px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Espacio entre el logo y la lista */
+}
+
+.gym-logo {
+  width: 150px; /* Ajusta el tamaño del logo según sea necesario */
+}
+
+h2 {
+  margin-top: 20px; /* Espacio superior para los títulos */
+  color: red; /* Cambiado a rojo */
+}
+
+ion-item {
+  background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+  border-radius: 10px; /* Bordes redondeados */
+  margin-bottom: 10px; /* Espacio entre los elementos */
+}
+
+ion-checkbox {
+  --background: #5d4bc5; /* Color de fondo del checkbox */
+}
+
+.button-container {
+  margin-top: 20px; /* Espacio superior para el botón */
+}
+
+ion-label p {
+  margin: 0; /* Elimina el margen por defecto */
+}
+
+ion-label p:nth-child(2) {
+  color: red; /* Color para "Pendiente" */
+}
+
+ion-label p:nth-child(3) {
+  color: red; /* Cambiado a rojo para "Completado" */
+}
